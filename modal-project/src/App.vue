@@ -2,7 +2,8 @@
   <div>
   <h1>{{ title }}</h1>
   <p>Welcome....</p>
-  <div v-if="showModel">
+  </div>
+  <div v-if="showModal">
     <Modal theme="" @close="toggleModal">
       <template v-slot:links>
         <a href="#">Sign up now</a>
@@ -12,8 +13,16 @@
       <p>Grab your ninja swag for half price!</p>
     </Modal>
   </div>
-  <button @click.alt="toggleModal">open model (alt)</button>
+
+  <div v-if="showModalTwo">
+    <Modal @close="toggleModalTwo">
+      <h1>Sign up to the news letter</h1>
+      <p>For updates amd Promo codes!</p>
+    </Modal>
   </div>
+  <button @click.alt="toggleModal">open modal (alt)</button>
+  <button @click="toggleModalTwo">open modal</button>
+  
 </template>
 
 <script>
@@ -27,14 +36,16 @@ export default {
   data() {
     return {
       title: 'My First Vue App :)',
-      header: 'Sign up for the Giveaway!',
-      text: 'Grab your ninja swag for half price!',
-      showModel: false
+      showModel: false,
+      showModalTwo: false,
     }
   },
   methods: {
     toggleModal() {
       this.showModel = !this.showModel
+    },
+    toggleModalTwo() {
+      this.showModelTwo = !this.showModelTwo
     }
   }
 }

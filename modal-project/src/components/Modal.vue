@@ -3,9 +3,10 @@
         <div class="modal" :class="{sale: theme === 'sale'}">
             <slot>default content</slot>
             <div class="actions">
+                <slot name="links"></slot>
 
             </div>
-            <slot name="links"></slot>
+            
         </div>
     </div>
     
@@ -30,6 +31,7 @@ export default {
     margin: 100px auto;
     background: white;
     border-radius: 10px;
+    height: 200px;
 }
 .backdrop {
     top: 0;
