@@ -2,7 +2,7 @@
   <div>
   <h1>{{ title }}</h1>
   <p>Welcome....</p>
-  </div>
+  
   <div v-if="showModal">
     <Modal theme="" @close="toggleModal">
       <template v-slot:links>
@@ -22,7 +22,7 @@
   </div>
   <button @click.alt="toggleModal">open modal (alt)</button>
   <button @click="toggleModalTwo">open modal</button>
-  
+  </div>
 </template>
 
 <script>
