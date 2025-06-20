@@ -36,16 +36,16 @@ export default {
   data() {
     return {
       title: 'My First Vue App :)',
-      showModel: false,
+      showModal: false,
       showModalTwo: false,
     }
   },
   methods: {
     toggleModal() {
-      this.showModel = !this.showModel
+      this.showModal = !this.showModel
     },
     toggleModalTwo() {
-      this.showModelTwo = !this.showModelTwo
+      this.showModalTwo = !this.showModelTwo
     }
   }
 }
